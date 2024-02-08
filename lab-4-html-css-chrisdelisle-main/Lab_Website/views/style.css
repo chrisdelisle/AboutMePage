@@ -10,11 +10,6 @@ footer{
 
 }
 
-#self-desc{
-    text-align: center;
-    font-size: 20px;
-}
-
 
 body{
     background-color:rgb(197, 249, 232);
@@ -115,3 +110,75 @@ body{
 td{
     background-color: white;
 }
+
+
+
+/* animations */
+
+/*self-desc text*/
+@keyframes slideInLeft {
+    from {
+        transform: translateX(10px);
+    }
+    to {
+        transform: translateX(-700px);
+    }
+
+    0%{ opacity: 1;}
+    100%{opacity: 0;}
+    80%{opacity: 0;}
+}
+@keyframes fade-inout{
+    0%{ opacity: 1;}
+    100%{opacity: 0;}
+}
+
+#self-desc{
+    text-align: left;
+    font-size: 20px;
+
+    animation-name: slideInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-fill-mode: none;
+
+    transform: translateX(10px);
+
+    /* animation: fade-inout 5s infinite alternate; */
+
+    z-index: 1;
+    position: relative;
+}
+
+/* self portrait */
+
+@keyframes slideInRight{
+    from{
+        transform: translateX(50px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+#self-image
+{
+    z-index:2;
+    position: relative;
+
+    animation-name: slideInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+    transform: translateX(0px);
+
+}
+
+
